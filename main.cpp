@@ -1,6 +1,17 @@
 #include <iostream>
-using namespace std;
+#include <cstdint>
+#include <vector>
+
+#include "loader.h"
+//我们记录的价格单位是0.01元，例如100.01元，记录为10001
+
+
+//存放全局数据
+ORDER_BOOK ASK;
+ORDER_BOOK BID;
+
+
 int main(){
-    cout<<"hello world!"<<endl;
+    load("data/test.csv", ASK);
     return 0;
 }
