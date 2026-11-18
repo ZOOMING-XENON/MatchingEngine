@@ -17,3 +17,34 @@ cmake -S . -B build          # 生成构建文件（只需第一次，或改了 
 cmake --build build         # 编译
 ctest --test-dir build --output-on-failure   # 运行测试
 ```
+# 项目结构
+```
+MatchingEngine/
+├── CMakeLists.txt
+├── main.cpp
+├── include/
+│   ├── struct.h
+│   ├── loader.h
+│   └── matcher.h
+├── src/
+│   ├── loader.cpp
+│   └── matcher.cpp
+├── test/
+│   ├── unit/
+│   │   ├── test_loader.cpp
+│   │   └── test_matcher.cpp
+│   ├── e2e/
+│   │   ├── test_engine.cpp
+│   │   └── cases/
+│   │       ├── 01_simple_match/
+│   │       │   ├── input.csv
+│   │       │   └── expected.csv
+│   │       ├── 02_partial_fill/
+│   │       └── 03_price_priority/
+│   └── CMakeLists.txt
+├── data/
+├── scripts/
+│   └── run_tests.ps1
+├── docs/
+└── build/
+```
