@@ -17,8 +17,14 @@ cmake_minimum_required(VERSION 3.20)
 
   # 3. 测试
   enable_testing()
-  add_executable(test_input test/test_input.cpp)
+  add_executable(test_input test/unit/test_input.cpp)
   target_link_libraries(test_input PRIVATE engine)
   add_test(NAME test_input
            COMMAND test_input
            WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/test)  # 在 test/ 下运行，../data/test.csv 才能找到
+  add_executable(test_engine test/e2e/test_engine.cpp)
+  target_link_libraries(test_engine PRIVATE engine)
+  add_test(NAME test_engine
+           COMMAND test_engine
+           WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/test/e2e)  
+           # 在test/e2e/ 下运行，cases/01_simple_match/test.csv 才能找到
