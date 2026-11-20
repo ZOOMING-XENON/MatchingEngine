@@ -12,6 +12,7 @@ ORDER_BOOK BID;
 
 
 int main(){
-    load("data/test.csv", ASK);
+    load("data/test.csv", ASK,DIRECTION::Ask);
     return 0;
 }
+   
