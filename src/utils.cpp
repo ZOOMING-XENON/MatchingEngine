@@ -6,6 +6,6 @@ void print_book(ORDER_BOOK book){
             std::string direction_string = o->direction==DIRECTION::Ask? "Ask":"Bid";
             std::cout<<o->order_id<<" "<<o->price<<" "<<o->quantity<<" "<<direction_string<<std::endl;
         }
-        std::cout<<std::string('-',30)<<std::endl;
+        std::cout<<std::string(30,'-')<<std::endl;
     }
 }

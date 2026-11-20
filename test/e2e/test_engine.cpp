@@ -13,7 +13,10 @@ int main(){
     load(path,Ask,DIRECTION::Ask);//这里填写相对路径是对于运行位置而言而不是该文件位置。例如运行位置在build文件夹中，则这里是build/case/...找不到
     // 填充Bid订单簿
     load(path,Bid,DIRECTION::Bid);
+    std::cout<<std::string(15,'-')<<"Ask Map"<<std::string(15,'-')<<std::endl;
     print_book(Ask);
+    std::cout<<std::endl<<std::endl;
+    std::cout<<std::string(15,'-')<<"Bid Map"<<std::string(15,'-')<<std::endl;
     print_book(Bid);
    
 

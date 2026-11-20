@@ -5,6 +5,7 @@
 #include "struct.h"
 #include "utils.h"
 #include <filesystem>
+#include<algorithm>
 
 namespace fs = std::filesystem;
 /**
