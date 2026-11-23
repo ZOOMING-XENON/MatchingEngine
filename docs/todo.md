@@ -1,0 +1,2 @@
+- 可以优化的地方 src/matcher.cpp中，找best ask/bid的时候，应该可以不用这么复杂判断是否list为空，因为以后的删除或者撮合后应该自动检查是否吃空一个level，如果吃空了就必须要清除
+- 简单版本的目前就只先实现GTC good till cancel， 之后需要扩展IOC immediate or cancel

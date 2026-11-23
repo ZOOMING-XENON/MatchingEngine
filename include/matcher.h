@@ -2,4 +2,4 @@
 #include"struct.h"
 #include<iostream>
 #include<algorithm> // sort要用
-void match(ORDER_BOOK& grand_book);
+void match(ORDER_BOOK& Ask,ORDER_BOOK& Bid);

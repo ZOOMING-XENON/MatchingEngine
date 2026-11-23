@@ -9,3 +9,9 @@ void print_book(ORDER_BOOK book){
         std::cout<<std::string(30,'-')<<std::endl;
     }
 }
+bool cmp_decending(PRICE_LEVEL* a, PRICE_LEVEL* b){
+    return a->price>b->price;
+}
+bool cmp_ascending(PRICE_LEVEL* a, PRICE_LEVEL* b){
+    return a->price<b->price;
+}

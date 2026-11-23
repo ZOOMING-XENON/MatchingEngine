@@ -4,6 +4,7 @@
 #include "loader.h" //这里面就包括了struct.h
 #include<iostream>
 #include<filesystem>
+#include "matcher.h"
 namespace fs = std::filesystem;
 
 int main(){
@@ -14,10 +15,11 @@ int main(){
     // 填充Bid订单簿
     load(path,Bid,DIRECTION::Bid);
     std::cout<<std::string(15,'-')<<"Ask Map"<<std::string(15,'-')<<std::endl;
-    print_book(Ask);
+    print_book(Ask);  
     std::cout<<std::endl<<std::endl;
     std::cout<<std::string(15,'-')<<"Bid Map"<<std::string(15,'-')<<std::endl;
     print_book(Bid);
+    match(Ask,Bid);
    
 
 
