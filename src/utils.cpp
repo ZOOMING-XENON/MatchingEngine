@@ -15,3 +15,12 @@ bool cmp_decending(PRICE_LEVEL* a, PRICE_LEVEL* b){
 bool cmp_ascending(PRICE_LEVEL* a, PRICE_LEVEL* b){
     return a->price<b->price;
 }
+/*
+返回排在第一个的价格，对于ask就是best ask对于bid就是best bid
+*/
+Price find_best(ORDER_BOOK& book){
+    Price result = 0;
+    if(book.price_level.empty()) return Price(-1); //表示出错
+    result = book.price_level[0]->price;
+    return result;
+}

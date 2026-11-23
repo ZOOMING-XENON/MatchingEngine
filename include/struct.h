@@ -19,5 +19,6 @@ struct PRICE_LEVEL{
 
 };
 struct ORDER_BOOK{
+    DIRECTION direction = DIRECTION::Ask;
     std::vector<PRICE_LEVEL*> price_level;
 };

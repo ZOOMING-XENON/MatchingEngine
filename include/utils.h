@@ -8,3 +8,4 @@
 void print_book(ORDER_BOOK book);
 bool cmp_decending(PRICE_LEVEL* a, PRICE_LEVEL* b);
 bool cmp_ascending(PRICE_LEVEL* a, PRICE_LEVEL* b);
+Price find_best(ORDER_BOOK& book);

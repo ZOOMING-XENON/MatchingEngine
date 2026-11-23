@@ -15,6 +15,7 @@ namespace fs = std::filesystem;
  * 而且我觉得我们可以直接load进不同的book中，这样子不用在match的时候再拆开来
  */
 void load(const fs::path& file_path,ORDER_BOOK& book,DIRECTION target_direction){ // file_path = data.csv
+    book.direction = target_direction;
     std::ifstream file(file_path);
     std::string line;
     if(!file.is_open()){
